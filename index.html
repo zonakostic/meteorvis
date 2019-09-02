@@ -13,7 +13,7 @@
   <link href="css/full-width-pics.css" rel="stylesheet">
   <style type="text/css">
 
-body { background: rgba(0,39,63,1.00) !important; 
+body { background: #07283f !important; 
           font-family: Roboto;
           text-align: justify;
           color: white;
@@ -22,7 +22,7 @@ body { background: rgba(0,39,63,1.00) !important;
 blockquote {
     color: rgba(230, 230, 230, .75);
     font-family: "Roboto", serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
     margin: 25px 50px 0px 50px;
     padding: .5em 1em;
@@ -53,7 +53,9 @@ cite {
       <span style="font-size:95px; font-family: Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00)">Meteor Impact on Earth </span>
       <br> <br>
     
-      <p> Nick Bostrom has a very interesting paper called “Existential Risk Prevention as Global Priority.” The basic intuition is that preventing even small risks of human extinction is worthwhile if we consider all the human generations it would save. One way to start saving all those future lives might be by digging into this data set of every recorded meteor impact on Earth from 2500 BCE to 2012.</p>
+      <blockquote> Nick Bostrom has a very interesting paper called “Existential Risk Prevention as Global Priority.” The basic intuition is that preventing even small risks of human extinction is worthwhile if we consider all the human generations it would save. One way to start saving all those future lives might be by digging into this data set of every recorded meteor impact on Earth from 2500 BCE to 2012.</blockquote>
+
+      <cite> <a href='https://www.existential-risk.org/concept.html'> Existential Risk Prevention as Global Priority</a> </cite>
 
       <br> <br>
 
@@ -88,69 +90,72 @@ cite {
 
       <cite> <a href="https://www.amsmeteors.org/meteor-showers/ "> amsmeteors.org </a></cite>
 
+      <p> Meteor events have varying degrees of impact on the earth. While small meteoroids and asteroids frequently scrape the earth's atmosphere with little to no consequences, major impact events caused by large astronomical objects, despite their rarity, can significantly shape the tracks of lives on earth.</p>
+
       <br> <br> 
 
-       <h4> <mark style='line-height: 1.7;'>Inspiration</mark></h4>
+       <h4> <mark style='line-height: 1.7;'>Storytelling</mark></h4>
 
        <br>
 
-       <p> The visualization presented was created using the </a href='https://meteoritical.org/'> Meteorological society </a> dataset. After publishing the dataset, the society produced the <a href="https://www.analyticbridge.datasciencecentral.com/profiles/blogs/registered-meteorites-that-has-impacted-on-earth-visualized">visualization </a> in Tableau. This initial visualization served as a quick visual overview and inspiration for some of the first sketches. Looking at the overview visualization, we can see a meteorite mass per year presented with a simple bar-chart.
+       <p> The visualization presented was created using the </a href='https://meteoritical.org/'> Meteorological society </a> dataset. After publishing the dataset, the society produced the <a href="https://www.analyticbridge.datasciencecentral.com/profiles/blogs/registered-meteorites-that-has-impacted-on-earth-visualized">visualization </a> in Tableau. This initial visualization served as a quick overview and inspiration for some of the first sketches. Looking at the overview visualization, we can see a meteorite mass per year presented with a simple bar-chart:
        </p>
 
 
-       <div align="middle" ><img width='50%' src="img/barchart_sketch.png"/> </div>
+       <div align="middle" ><img width='60%' src="img/barchart_sketch.png"/> </div>
 
-       <br> 
+       <br>
 
-       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       <p> While sketching the bar charts, we accidentally smudged them and noticed with surprise that the shape resembles the bright tail of a meteor. We then proceeded to replicate this effect with more bar charts. We started deleting lines, changing the positions, and introducing new colors. All the steps were hand-sketched and that transfered into the Photoshop. 
        </p>
 
-       <div align="middle" ><img width='90%' src="img/bars-on-fire.png"/> </div>
+       <div align="middle" ><img width='80%' src="img/bars-on-fire.png"/> </div>
 
        <br> 
       
-       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       <p> Considering that the bar charts only represent partial geometry of a flying meteor, we experimented with a variety of plotting schemes hoping to visualize the data in the shape of a whole meteor.
        </p>
 
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+         <p> Our thought process is portrayed in the figure below. The width and height of a bar represent a time span and a certain meteor parameter, respectively. The bar chart can be morphed into a semi-circle donut chart with close resemblance to the meteor body. Used in tandem, the bar chart and donut chart together can carry more information: an arc and a width segment connected by a dotted line correspond to the same time span, whereas their orange bars are a measure of two different or correlated meteor parameters.
        </p>
 
-       <div align="middle"><img width='80%' src="img/bar-to-pie2.png"/> </div>
+       <div align="middle"><img width='100%' src="img/bar-to-pie2.png"/> </div>
 
        <br> <br>
       
-       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-       </p>
-
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       <p> The final sketch is shown in the figure below, where on the donut chart the ratio of the height of the shaded orange bar to the whole bar indicates the meteor fallen percentage, and on the bar chart the height of the bar describes the magnitude of total mass per year. One minor change in the final sketch is that within a single time span, there are multiple data on the bar chart that visualize the data of total mass per year on a finer scale.
        </p>
 
        <div align="middle"><img width='85%' src="img/midterm-sketch.png"/> </div>
 
-       <br> <br>
+   <br> <br> 
+
+       <span style="font-size:60px; font-family: Bahnschrift; font-weight:bold; color:grey; line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Previous records of epic meteor events make us wondering: <span style="font-size:60px; font-family:Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00); line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Are we living in a meteor peak period? </span>Are we getting better chance of seeing a splendid meteor shower?
+      To understand the patterns of global meteor events, we investigated data with a time frame between BCE 2500 and CE 2012.</span>
+
+       <br> <br> <br> <br>
 
       <h4> <mark style='line-height: 1.7;'>How to read?</mark></h4>
 
-       <br>  
-
-      <p> Meteor events have varying degrees of impact on the earth. While small meteoroids and asteroids frequently scrape the earth's atmosphere with little to no consequences, major impact events caused by large astronomical objects, despite their rarity, can significantly shape the tracks of lives on earth.<br> <br>
-
-      According to the research from American Meteor Society: About 10 to 50 meteorite dropping events occur over the earth each day. but only a handful of witnessed falls occur each year. This is because most meteorites fall into the ocean, land in remote areas of the Earth, or are just not seen to fall (fall during the day).
-      <br><br>
-
-      Previous records of epic meteor events make us wondering: Are we living in a meteor peak period? Are we getting better chance of seeing a splendid meteor shower?
-      To understand the patterns of global meteor events, we investigated data from XXX with a time frame between BCE 2500 and CE 2012.
-      <br><br>
+    <br>
 
       We decided to focus on two aspects: 
-      1. The total mass per year. A bar chart was constructed in Tableau using year as filter, showing the sum of mass for each year.
-      2. The amount ratio that were seen and were tracked down successfully : Fallen Percentage = Falls/(Falls + Finds)*100%
-      "Finds": meteorites which were found on the ground unrelated to any sighting.
-      "Falls": meteorites which were seen to fall from the sky and which were tracked down successfully.</p>
+      <ol>
+        <li>The total mass per year. A bar chart was constructed in Tableau using year as filter, showing the sum of mass for each year.</li>
+      <li>The amount ratio that were seen and were tracked down successfully: </li>
+
+      <ul> <li>Fallen Percentage = Falls/(Falls + Finds)*100%
+      "Finds": meteorites which were found on the ground unrelated to any sighting.</li>
+     <li>"Falls": meteorites which were seen to fall from the sky and which were tracked down successfully.</li>
+      <ul>
+   
+</ol>
+    </p>
 
       <br> <br>
 
-      <div align="middle"><img src="img/barchart.png"/> </div>
+      <div align="middle"><img width='40%' src="img/legend.png"/> </div>
+      
 
       <br> <br>
       
@@ -158,25 +163,16 @@ cite {
 (2500 BCE-1000 BCE, 1000 BCE-500 CE, 500CE-1800 CE and 1800 CE-2012 CE), with an emphasize of analyzing the last part.
        </p>
 
-         <p> At this stage our concern was how to create a visualization that converts the “cold” data into something vividly perceived through senses, 
+       <br><br>
+
+       <div align="middle"><img width='55%' src="img/barchart.png"/> </div>
+
+       <br> <br>
+
+        <p> At this stage our concern was how to create a visualization that converts the “cold” data into something vividly perceived through senses, 
 in order to enhance the immersive feeling of the audience.  
 The two diagrams above were ultimately combined into a shape that resembled a real meteorite:
 it is composed by the fallen percentages listed alongside the curved timeline, and the bar chart imitating the “lighting tail”.
-       </p>
-
-       <br><br>
-
-       <div align="middle"><img width='40%' src="img/legend.png"/> </div>
-
-       <br> <br>
-      
-       <p> To sum up, existing data suggests that currently there is reduced probability of observing a meteorite, and the total mass per year is decreasing. 
-It is speculated that the reasons behind these due primarily to the lower atmospheric clarity than before and thicker cloud conditions where the meteorites 
-are more likely to burn up. Even so, preparation is always a must. “We know for a fact the dinosaurs did not have a space program.” NASA Administrator 
-Jim Bridenstine said, quoting TV personality Bill Nye. “But we do, and we need to use it.”
-       </p>
-
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
        </p>
 
     </div>
@@ -185,7 +181,10 @@ Jim Bridenstine said, quoting TV personality Bill Nye. “But we do, and we need
 
   <section>
 
-       <div align='middle'><img width='80%' src="img/final.png"/> </div>
+    <br><br>
+
+       <div align='middle'><img width='90%' src="img/final.png"/> </div>
+       <br>
        <br>
 
   </section>
@@ -193,11 +192,42 @@ Jim Bridenstine said, quoting TV personality Bill Nye. “But we do, and we need
   <section class="mx-auto w-75 p-3">
     <div class="container">
 
-         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           <p> To sum up, existing data suggests that currently there is reduced probability of observing a meteorite, and the total mass per year is decreasing. 
+It is speculated that the reasons behind these due primarily to the lower atmospheric clarity than before and thicker cloud conditions where the meteorites 
+are more likely to burn up. Even so, preparation is always a must. “We know for a fact the dinosaurs did not have a space program.” NASA Administrator 
+Jim Bridenstine said, quoting TV personality Bill Nye. “But we do, and we need to use it.”
        </p>
+
+       <br> <br>
+
+       <h4> <mark style='line-height: 1.7;'>About Us</mark></h4>
+
+       <br>
+
+       <p> Ning Chen is a graduate student at Harvard University. Just a portion of her magical art skills is presented with this work. <a href="https://www.linkedin.com/in/zonakostic/">
+        Zona Kostic </a> is a research fellow and adjunct faculty at Harvard University. Creative advising and storytelling were the main contributions of hers in this work. The concept was developed as part of the "E-79: The Art and Design of Infomration" course. </p>
+
+       <br>
+
+       <h4> <mark style='line-height: 1.7;'>Spatial thanks</mark></h4>
+
+       <br>
+
+       <p> Out special thanks goes to <a href="https://www.linkedin.com/in/giuliazerbini/">Giulia Zerbini </a>, the best teaching fellow at Harvard Unversity and the most talented communication designer we have a chance to work with! </p>
 
     </div>
   </section>
+
+<br> <br>
+
+   <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Ning Chen & Zona Kostic 2019
+    </div>
+  </footer>
+
+  <br> <br>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
