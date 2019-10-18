@@ -2,281 +2,388 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <title>MeteorVIS by Ning and Zona</title>
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/full-width-pics.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MeteorVIS by Ning and Zona</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
-
-
-  <style type="text/css">
-
-@font-face {
-  font-family:'Bahnschrift';
-  src: url('fonts/BAHNSCHRIFT.TTF'),
-
-}
-
-body { background: #07283f !important; 
-          font-family: 'Roboto', sans-serif;;
-          color: white;
-          line-height: 1.5;}       
-
-p {text-align: justify;}          
-
-blockquote {
-    color: rgba(230, 230, 230, .75);
-    font-family: 'Roboto';
-    font-size: 20px;
-    font-weight: 100;
-    margin: 25px 50px 0px 50px;
-    text-align: justify;
-    padding: .5em 1em;
-    border-radius: 5px;
-    border-left: 3px solid rgba(230, 230, 230, .75);
-}
-
-cite {
-    text-align: right;
-    font-weight: 100;
-    font-size: .75em;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom:25px;
-    padding-right: 75px;
-    display: block;
-    font-style: normal;
-}
-
-mark{
-  line-height: 1.5em;
-}
-
-</style>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Bahnschrift';
+            src: url('fonts/BAHNSCHRIFT.TTF'),
+        }
+        
+        body {
+            background: #07283f !important;
+            font-family: 'Roboto', sans-serif;
+            ;
+            color: white;
+            line-height: 1.5;
+        }
+        
+        p {
+            text-align: justify;
+        }
+        
+        blockquote {
+            color: rgba(230, 230, 230, .75);
+            font-family: 'Roboto';
+            font-size: 20px;
+            font-weight: 100;
+            margin: 25px 50px 0px 50px;
+            text-align: justify;
+            padding: .5em 1em;
+            border-radius: 5px;
+            border-left: 3px solid rgba(230, 230, 230, .75);
+        }
+        
+        cite {
+            text-align: right;
+            font-weight: 100;
+            font-size: .75em;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 25px;
+            padding-right: 75px;
+            display: block;
+            font-style: normal;
+        }
+        
+        mark {
+            line-height: 1.5em;
+        }
+        
+        div#title-img-container {
+            height: 60vh;
+            background-color: #07283f !important;
+        }
+        
+        img#meteor-measure {
+            width: 60%;
+            top: 10%;
+            left: 20%;
+            position: absolute;
+            animation-name: meteor-measure-rotate, meteor-measure-opacity-change;
+            animation-duration: 2s, 2s;
+            animation-timing-function: ease-in-out, linear;
+        }
+        
+        @keyframes meteor-measure-rotate {
+            from {
+                transform: rotate(180deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+        
+        @keyframes meteor-measure-opacity-change {
+            0% {
+                opacity: 0.0;
+            }
+            80% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1.0;
+            }
+        }
+        
+        img#meteor-fly {
+            width: 60%;
+            top: 10%;
+            left: 20%;
+            position: absolute;
+            animation-name: meteor-fly-move, meteor-fly-shake;
+            animation-duration: 2s, 1s;
+            animation-iteration-count: 1, infinite;
+            animation-timing-function: ease-in-out, linear;
+            animation-delay: 0s, 2s;
+        }
+        
+        @keyframes meteor-fly-move {
+            from {
+                top: -60%;
+                left: 80%;
+            }
+            to {
+                top: 10%;
+                left: 20%;
+            }
+        }
+        
+        @keyframes meteor-fly-shake {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+            90% {
+                transform: translate(1px, 2px) rotate(0deg);
+            }
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Content section -->
-  <section class="mx-auto w-75 m-3">
-    <div class="container">
-
-      <div class="align-items-center no-gutters mb-4 mb-lg-12">
-        <div class="col-xl-12 col-lg-12">
-
-      <div align="middle" ><img class='img-fluid' src="img/meteor_2.png"/> </div>
-
-      <div class="text-center" >
-      <span style="font-size:80px; font-family: Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00);">Meteor Impact on Earth </span>
-
+    <div align="middle" id="title-img-container">
+        <img src="img/meteor_measure.png" alt="meteor measure" id="meteor-measure">
+        <img src="img/meteor_fly.png" alt="meteor fly" id="meteor-fly">
     </div>
+                    
+    <!-- Content section -->
+    <section class="mx-auto w-75 m-3">
+        <div class="container">
 
-    
-      <blockquote> Nick Bostrom has a very interesting paper called “Existential Risk Prevention as Global Priority.” The basic intuition is that preventing even small risks of human extinction is worthwhile if we consider all the human generations it would save. </blockquote>
+            <div class="align-items-center no-gutters mb-4 mb-lg-12">
+                <div class="col-xl-12 col-lg-12">
 
-      <cite> <a href='https://www.existential-risk.org/concept.html'> Existential Risk Prevention as Global Priority</a> </cite>
+                    <!-- <div align="middle" id="title-img-container"> -->
+                        <!-- <img src="img/meteor_measure.png" alt="meteor measure" id="meteor-measure"> -->
+                        <!-- <img src="img/meteor_fly.png" alt="meteor fly" id="meteor-fly"> -->
+                    <!-- </div> -->
 
-      <br> <br>
+                    <div class="text-center">
+                        <span style="font-size:80px; font-family: Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00);">Meteor Impact on Earth </span>
+                    </div>
 
-        <p> Meteor events have varying degrees of impact on the earth. While small meteoroids and asteroids frequently scrape the earth's atmosphere with little to no consequences, major impact events caused by large astronomical objects, despite their rarity, can significantly shape the tracks of lives on earth.</p>
+                    <blockquote> Nick Bostrom has a very interesting paper called “Existential Risk Prevention as Global Priority.” The basic intuition is that preventing even small risks of human extinction is worthwhile if we consider all the human generations it would save. </blockquote>
 
-         <br> <br>
+                    <cite> <a href='https://www.existential-risk.org/concept.html'> Existential Risk Prevention as Global Priority</a> </cite>
 
-      <h4> <mark>Meteorite "Falls" vs. "Finds" </mark> </h4>
+                    <br>
+                    <br>
 
-      <br> 
-      <p> <a href="https://www.permanent.com/meteorites-falls-finds.html">Finds </a> are meteorites which were found on the ground unrelated to any sighting, due to the finder recognizing them to be clearly identifiable as being of nonterritorial origin. <a href="https://www.psi.edu/epo/faq/meteor.html">Falls </a> are meteorites which were seen to fall from the sky and which were tracked down successfully.To date, there have been nearly 1,100 recovered falls (meteorites seen to fall) and nearly 40,000 finds (found, but not seen to fall). It is estimated that probably 500 meteorites reach the surface of the Earth each year, but less than 10 are recovered. <u> <b>This is because most fall into the ocean, land in remote areas of the Earth, land in places that are not easily accessible, or are just not seen to fall (fall during the day). </b></u></p>
+                    <p> Meteor events have varying degrees of impact on the earth. While small meteoroids and asteroids frequently scrape the earth's atmosphere with little to no consequences, major impact events caused by large astronomical objects, despite their rarity, can significantly shape the tracks of lives on earth.</p>
 
-     <br> <br> 
+                    <br>
+                    <br>
 
-      <h4> <mark>How frequent do meteorite falls occur each year? </mark></h4>
-      <br> 
-      <p>Our best estimates of the total incoming meteoroid flux indicate that about 10 to 50 meteorite dropping events occur over the earth each day. It should be remembered, however, that 2/3 of these events will occur over ocean, while another 1/4 or so will occur over very uninhabited land areas, leaving only about 2 to 12 events each day with the potential for discovery by people. Half of these again occur on the night side of the earth, with even less chance of being
-        <a href="https://www.amsmeteors.org/fireballs/faqf/#10">noticed.</a></p>
+                    <h4> <mark>Meteorite "Falls" vs. "Finds" </mark> </h4>
 
-    <br> <br> 
+                    <br>
+                    <p> <a href="https://www.permanent.com/meteorites-falls-finds.html">Finds </a> are meteorites which were found on the ground unrelated to any sighting, due to the finder recognizing them to be clearly identifiable as being of nonterritorial origin. <a href="https://www.psi.edu/epo/faq/meteor.html">Falls </a> are meteorites which were seen to fall from the sky and which were tracked down successfully.To date, there have been nearly 1,100 recovered falls (meteorites seen to fall) and nearly 40,000 finds (found, but not seen to fall). It is estimated that probably 500 meteorites reach the surface of the Earth each year, but less than 10 are recovered. <u> <b>This is because most fall into the ocean, land in remote areas of the Earth, land in places that are not easily accessible, or are just not seen to fall (fall during the day). </b></u></p>
 
-      <h4> <mark style='line-height: 1.7;'>How many meteors can I expect to see if I go out to observe for them, when no meteor shower is occurring? </mark></h4>
-      <br>   
+                    <br>
+                    <br>
 
-      <p> The number of random, or “sporadic” meteors that can be seen in the night sky is quite variable, depending upon such factors as the time of night, time of year, light pollution, and cloud conditions. Perhaps the most important factors necessary in order to observe meteors are to have a clear, unobstructed view, out in the open, and under as dark sky conditions as possible. </p>
+                    <h4> <mark>How frequent do meteorite falls occur each year? </mark></h4>
+                    <br>
+                    <p>Our best estimates of the total incoming meteoroid flux indicate that about 10 to 50 meteorite dropping events occur over the earth each day. It should be remembered, however, that 2/3 of these events will occur over ocean, while another 1/4 or so will occur over very uninhabited land areas, leaving only about 2 to 12 events each day with the potential for discovery by people. Half of these again occur on the night side of the earth, with even less chance of being
+                        <a href="https://www.amsmeteors.org/fireballs/faqf/#10">noticed.</a></p>
 
-<br> <br>
-      
-      <div class="text-justify">
+                    <br>
+                    <br>
 
-       <span style="font-size:50px; font-family:Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00); line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Is this why we are getting much less “falls” in the most recent 50 years? </span>
+                    <h4> <mark style='line-height: 1.7;'>How many meteors can I expect to see if I go out to observe for them, when no meteor shower is occurring? </mark></h4>
+                    <br>
 
-     </div>
+                    <p> The number of random, or “sporadic” meteors that can be seen in the night sky is quite variable, depending upon such factors as the time of night, time of year, light pollution, and cloud conditions. Perhaps the most important factors necessary in order to observe meteors are to have a clear, unobstructed view, out in the open, and under as dark sky conditions as possible. </p>
 
-      <blockquote>
-      We can’t see or track them down due to poor atmospheric clarity, or they are more likely been burned up due to thicker cloud conditions. 
-      </blockquote>
+                    <br>
+                    <br>
 
-      <cite> <a href="https://www.amsmeteors.org/meteor-showers/ "> amsmeteors.org </a></cite>
+                    <div class="text-justify">
 
-       <br> <br> 
+                        <span style="font-size:50px; font-family:Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00); line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Is this why we are getting much less “falls” in the most recent 50 years? </span>
 
-       <h4> <mark style='line-height: 1.7;'>Storytelling</mark></h4>
+                    </div>
 
-       <br>
+                    <blockquote>
+                        We can’t see or track them down due to poor atmospheric clarity, or they are more likely been burned up due to thicker cloud conditions.
+                    </blockquote>
 
-       <p> Visualizations presented with this work were created using the </a href='https://meteoritical.org/'> Meteorological society </a> dataset. After publishing the dataset, the society produced the <a href="https://www.analyticbridge.datasciencecentral.com/profiles/blogs/registered-meteorites-that-has-impacted-on-earth-visualized">visualization </a> of their own, created in Tableau. The Tableau solution served as a quick overview and inspiration for some of the first sketches of ours. Looking at it, we observed a first pattern - a meteorite mass per year presented with a simple bar-chart:
-       </p>
+                    <cite> <a href="https://www.amsmeteors.org/meteor-showers/ "> amsmeteors.org </a></cite>
 
+                    <br>
+                    <br>
 
-       <div align="middle" ><img class='img-fluid mb-3 mb-lg-0' src="img/barchart_sketch.png"/> </div>
+                    <h4> <mark style='line-height: 1.7;'>Storytelling</mark></h4>
 
-       <br>
+                    <br>
 
-       <p> While sketching the bar charts, we accidentally smudged them and noticed with surprise that the shape resembles the bright tail of a meteor. We then proceeded to replicate this effect with more bar charts. We started deleting lines, changing the positions, and introducing new colors. All the steps were hand-sketched and that transfered into the Photoshop. 
-       </p>
+                    <p> Visualizations presented with this work were created using the </a href='https://meteoritical.org/'> Meteorological society </a> dataset. After publishing the dataset, the society produced the <a href="https://www.analyticbridge.datasciencecentral.com/profiles/blogs/registered-meteorites-that-has-impacted-on-earth-visualized">visualization </a> of their own, created in Tableau. The Tableau solution served as a quick overview and inspiration for some of the first sketches of ours. Looking at it, we observed a first pattern - a meteorite mass per year presented with a simple bar-chart:
+                    </p>
 
-       <div align="middle" ><img class='img-fluid mb-3 mb-lg-0' src="img/bars-on-fire.png"/> </div>
+                    <div align="middle"><img class='img-fluid mb-3 mb-lg-0' src="img/barchart_sketch.png" /> </div>
 
-       <br> 
-      
-       <p> Considering that the bar charts only represent partial geometry of a flying meteor, we experimented with a variety of plotting schemes hoping to visualize the data in the shape of a whole meteor.
-       </p>
+                    <br>
 
-         <p> Our thought process is portrayed in the figure below. The width and height of a bar represent a time span and a certain meteor parameter, respectively. The bar chart can be morphed into a semi-circle donut chart with close resemblance to the meteor body. Used in tandem, the bar chart and donut chart together can carry more information: an arc and a width segment connected by a dotted line correspond to the same time span, whereas their orange bars are a measure of two different or correlated meteor parameters.
-       </p>
+                    <p> While sketching the bar charts, we accidentally smudged them and noticed with surprise that the shape resembles the bright tail of a meteor. We then proceeded to replicate this effect with more bar charts. We started deleting lines, changing the positions, and introducing new colors. All the steps were hand-sketched and that transfered into the Photoshop.
+                    </p>
 
-       <div align="middle"><img class='img-fluid' src="img/bar-to-pie2.png"/> </div>
+                    <div align="middle"><img class='img-fluid mb-3 mb-lg-0' src="img/bars-on-fire.png" /> </div>
 
-       <br> <br>
-      
-       <p> The final sketch is shown in the figure below, where on the donut chart the ratio of the height of the shaded orange bar to the whole bar indicates the meteor fallen percentage, and on the bar chart the height of the bar describes the magnitude of total mass per year. One minor change in the final sketch is that within a single time span, there are multiple data on the bar chart that visualize the data of total mass per year on a finer scale.
-       </p>
+                    <br>
 
-       <div align="middle"><img class='img-fluid' src="img/midterm-sketch.png"/> </div>
+                    <p> Considering that the bar charts only represent partial geometry of a flying meteor, we experimented with a variety of plotting schemes hoping to visualize the data in the shape of a whole meteor.
+                    </p>
 
-   <br> <br> 
+                    <p> Our thought process is portrayed in the figure below. The width and height of a bar represent a time span and a certain meteor parameter, respectively. The bar chart can be morphed into a semi-circle donut chart with close resemblance to the meteor body. Used in tandem, the bar chart and donut chart together can carry more information: an arc and a width segment connected by a dotted line correspond to the same time span, whereas their orange bars are a measure of two different or correlated meteor parameters.
+                    </p>
 
-      <div class="text-justify">
+                    <div align="middle"><img class='img-fluid' src="img/bar-to-pie2.png" /> </div>
 
-       <span style="font-size:50px; font-family: Bahnschrift; font-weight:bold; color:grey; line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Previous records of epic meteor events make us wondering: <span style="font-size:50px; font-family:Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00); line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Are we living in a meteor peak period? </span>Are we getting better chance of seeing a splendid meteor shower?
-      To understand the patterns of global meteor events, we investigated the dataset from meteorological society. </span>
+                    <br>
+                    <br>
 
-    </div>
+                    <p> The final sketch is shown in the figure below, where on the donut chart the ratio of the height of the shaded orange bar to the whole bar indicates the meteor fallen percentage, and on the bar chart the height of the bar describes the magnitude of total mass per year. One minor change in the final sketch is that within a single time span, there are multiple data on the bar chart that visualize the data of total mass per year on a finer scale.
+                    </p>
 
-       <br> <br> 
+                    <div align="middle"><img class='img-fluid' src="img/midterm-sketch.png" /> </div>
 
-      <h4> <mark style='line-height: 1.7;'>How to read?</mark></h4>
+                    <br>
+                    <br>
 
-    <br>
+                    <div class="text-justify">
 
-    The data presents the meteor impact on Earth from 2500 BCE to 2012. Two parameters were displayed in the legend below, adopting the model we invented during the sketch phase:  <br><br>
-      <ol>
-        <li>The total mass per year. A bar chart was constructed in Tableau using year as filter, showing the sum of mass for each year.</li>
-      <li>The amount ratio that were seen and were tracked down successfully: Fallen Percentage = Falls/(Falls + Finds)*100% </li></ol>
+                        <span style="font-size:50px; font-family: Bahnschrift; font-weight:bold; color:grey; line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Previous records of epic meteor events make us wondering: <span style="font-size:50px; font-family:Bahnschrift; font-weight:bold; color:rgba(254,249,140,1.00); line-height: 1.2; letter-spacing: 0.1px; word-spacing: normal;">Are we living in a meteor peak period? </span>Are we getting better chance of seeing a splendid meteor shower? To understand the patterns of global meteor events, we investigated the dataset from meteorological society. </span>
 
-      "Finds": meteorites which were found on the ground unrelated to any sighting. "Falls": meteorites which were seen to fall from the sky and which were tracked down successfully.
-   
+                    </div>
 
-    </p>
+                    <br>
+                    <br>
 
-<br> <br>
+                    <h4> <mark style='line-height: 1.7;'>How to read?</mark></h4>
 
+                    <br> The data presents the meteor impact on Earth from 2500 BCE to 2012. Two parameters were displayed in the legend below, adopting the model we invented during the sketch phase:
+                    <br>
+                    <br>
+                    <ol>
+                        <li>The total mass per year. A bar chart was constructed in Tableau using year as filter, showing the sum of mass for each year.</li>
+                        <li>The amount ratio that were seen and were tracked down successfully: Fallen Percentage = Falls/(Falls + Finds)*100% </li>
+                    </ol>
 
-      <div align="middle"><img class='img-fluid' src="img/legend.png"/> </div>
-      
-      <br> <br>
+                    "Finds": meteorites which were found on the ground unrelated to any sighting. "Falls": meteorites which were seen to fall from the sky and which were tracked down successfully.
 
-      
-       <p> With a noticeable peak period between 1800-1966, when calculating the fallen percentage, we divided the timeline into 4 parts
-(2500 BCE-1000 BCE, 1000 BCE-500 CE, 500CE-1800 CE and 1800 CE-2012 CE), with an emphasize of analyzing the last part.
-       </p>
+                    </p>
 
-       <br>
+                    <br>
+                    <br>
 
-       <div align="middle"><img class='img-fluid' 
-        src="img/barchart.png"/> </div>
+                    <div align="middle"><img class='img-fluid' src="img/legend.png" /> </div>
 
-       <br> <br>
+                    <br>
+                    <br>
 
-        <p> The two diagrams above were ultimately combined into a shape that resembled a real meteorite:
-it is composed by the fallen percentages listed alongside the curved timeline, and the bar chart imitating the “lighting tail”.
-       </p>
+                    <p> With a noticeable peak period between 1800-1966, when calculating the fallen percentage, we divided the timeline into 4 parts (2500 BCE-1000 BCE, 1000 BCE-500 CE, 500CE-1800 CE and 1800 CE-2012 CE), with an emphasize of analyzing the last part.
+                    </p>
 
-       <p> Finally, an infographic design was created that visualized two parameters using shapes resembling real meteorites to enhance audience immersion. </p>
+                    <br>
 
-    </div>
+                    <div align="middle"><img class='img-fluid' src="img/barchart.png" /> </div>
 
-    <br> <br> 
+                    <br>
+                    <br>
 
-     <h4 align='middle'><mark style='line-height: 1.7;'>The Peak Meteor Period
+                    <p> The two diagrams above were ultimately combined into a shape that resembled a real meteorite: it is composed by the fallen percentages listed alongside the curved timeline, and the bar chart imitating the “lighting tail”.
+                    </p>
+
+                    <p> Finally, an infographic design was created that visualized two parameters using shapes resembling real meteorites to enhance audience immersion. </p>
+
+                </div>
+
+                <br>
+                <br>
+
+                <h4 align='middle'><mark style='line-height: 1.7;'>The Peak Meteor Period
       </mark></h4>
-      <h6 align='middle'> 1800-1966 </h6>
+                <h6 align='middle'> 1800-1966 </h6>
 
-      </div>
-      </div>
+            </div>
+        </div>
 
-  </section>
+    </section>
 
-  <section>
+    <section>
 
-    <br>
+        <br>
 
-       <div align='middle'><img class="img-fluid mb-3 mb-lg-0" src="img/final.png"/> </div>
-       <br>
-       <br>
-       <br>
+        <div align='middle'><img class="img-fluid mb-3 mb-lg-0" src="img/final.png" /> </div>
+        <br>
+        <br>
+        <br>
 
-  </section>
+    </section>
 
-  <section class="mx-auto w-75 p-3">
-    <div class="container">
+    <section class="mx-auto w-75 p-3">
+        <div class="container">
 
-           <p> To sum up, existing data suggests that although the 1800-2012 period contributes to the majority of total mass through years, there is reduced probability of observing a meteorite, and the total mass per year is decreasing. 
-It is speculated that the reasons behind these due primarily to the lower atmospheric clarity than before and thicker cloud conditions where the meteorites 
-are more likely to burn up. Even so, preparation is always a must. “We know for a fact the dinosaurs did not have a space program.” NASA Administrator 
-Jim Bridenstine said, quoting TV personality Bill Nye. “But we do, and we need to use it.”
-       </p>
+            <p> To sum up, existing data suggests that although the 1800-2012 period contributes to the majority of total mass through years, there is reduced probability of observing a meteorite, and the total mass per year is decreasing. It is speculated that the reasons behind these due primarily to the lower atmospheric clarity than before and thicker cloud conditions where the meteorites are more likely to burn up. Even so, preparation is always a must. “We know for a fact the dinosaurs did not have a space program.” NASA Administrator Jim Bridenstine said, quoting TV personality Bill Nye. “But we do, and we need to use it.”
+            </p>
 
-       <br> <br>
+            <br>
+            <br>
 
-       <h4> <mark style='line-height: 1.7;'>About Us</mark></h4>
+            <h4> <mark style='line-height: 1.7;'>About Us</mark></h4>
 
-       <br>
+            <br>
 
-       <p> 
+            <p>
 
-The project concept was developed as part of the "E-79: The Art and Design of Information" course. <a href="https://www.linkedin.com/in/ning-chen-76030a18/">Ning Chen </a> is an information designer, just a portion of her magical art skills is presented with this work. <a href="https://www.linkedin.com/in/zonakostic/">
+                The project concept was developed as part of the "E-79: The Art and Design of Information" course. <a href="https://www.linkedin.com/in/ning-chen-76030a18/">Ning Chen </a> is an information designer, just a portion of her magical art skills is presented with this work. <a href="https://www.linkedin.com/in/zonakostic/">
         Zona Kostic </a> is a research fellow and adjunct faculty at Harvard University. Creative advising and storytelling were the main contributions of hers in this work.
 
-      </p>
+            </p>
 
-       <br>
+            <br>
 
-       <h4> <mark style='line-height: 1.7;'>Special thanks</mark></h4>
+            <h4> <mark style='line-height: 1.7;'>Special Thanks</mark></h4>
 
-       <br>
+            <br>
 
-       <p> Our special thanks goes to <a href="https://www.linkedin.com/in/giuliazerbini/">Giulia Zerbini</a>, the best teaching fellow at Harvard Unversity and the most talented communication designer we have a chance to work with! </p>
+            <p> Our special thanks goes to <a href="https://www.linkedin.com/in/giuliazerbini/">Giulia Zerbini</a>, the best teaching fellow at Harvard University and the most talented communication designer we have a chance to work with! </p>
 
-    </div>
-  </section>
+        </div>
+    </section>
 
-<br> <br>
+    <br>
+    <br>
 
-   <!-- Footer -->
-  <footer class="bg-black small text-center text-white-50">
-    <div class="container">
-      Copyright &copy; Ning Chen & Zona Kostic 2019
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+        <div class="container">
+            Copyright &copy; Ning Chen & Zona Kostic 2019
+        </div>
+    </footer>
 
-  <br> <br>
+    <br>
+    <br>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
