@@ -1,2 +1,2 @@
 # MeteorVIS by Ning Chan and Zona Kostic
-# [website](https://zonakostic.github.io/meteorvis/)
+# [website](https://ningchen8743.github.io/meteorvis/)
