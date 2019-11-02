@@ -161,15 +161,18 @@
             position: relative;
         }
         
-        img#whole {
-            animation-name: whole-fly;        
+        img#whole {      
             position: absolute;
+            top: 7%;
+            left: 7%;
+        }
+        
+        img#whole.is-visible {
+            animation-name: whole-fly;
             animation-duration: 2s;
             animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
             animation-delay: 0s;
-            top: 7%;
-            left: 7%;
         }
         
         @keyframes whole-fly {
@@ -183,14 +186,17 @@
             }
         }
         
-        img#zoom-out {          
-            animation-name: zoom-out-opacity-change;        
+        img#zoom-out {                 
             position: absolute;
+            top: 7%;
+            left: 7%;
+        }
+        
+        img#zoom-out.is-visible {
+            animation-name: zoom-out-opacity-change;
             animation-duration: 4s;
             animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
-            top: 7%;
-            left: 7%;
         }
         
         @keyframes zoom-out-opacity-change {
@@ -206,14 +212,17 @@
         }
         
         
-        img#specific {         
-            animation-name: specific-fly;        
+        img#specific {                
             position: absolute;
+            top: 7%;
+            left: 7%;         
+        }
+        
+        img#specific.is-visible {
+            animation-name: specific-fly;
             animation-duration: 4s;
             animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
-            top: 7%;
-            left: 7%;         
         }
         
         @keyframes specific-fly {
