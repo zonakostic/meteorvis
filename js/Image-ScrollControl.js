@@ -1,46 +1,40 @@
 "use strict";
 
-/* let waypoint = new Waypoint({
-    element: document.getElementById("final-img-container"),
-    handler: function(direction) {
-        alert('I am 90px from the top of the window')
-    },
-    offset: 90
-}) */
-
-
-/* let finalImageGroup = document.getElementById("final-img-container");
-
-function isScrolledIntoView(finalImageGroup, $window){
-    
-}
-
-document.on("scroll", function (){
-    if (isScrolledIntoView(finalImageGroup, $window)) {
-        
-    }
-});
- */
-
 { // start scope
          
 let elementsToShow = document.querySelectorAll('.show-on-scroll');
-let counter = 0;
-function animationLoop() {     
-  elementsToShow.forEach(function (el) {
-    if (isElementInViewport(el)) {
-      el.classList.add('is-visible');
-    } else {
-      el.classList.remove('is-visible');
+//this is a nodelist
+let elementsToShowArray = Array.from(elementsToShow);
+//array.from converts elements into array
+
+for(let i = 0; i < elementsToShowArray.length; ++i)
+{
+    let item = elementsToShowArray[i];
+    
+    //trigger the first animation when load
+    if(isElementInViewport(item))
+    {
+      item.classList.add('is-visible');
     }
-  });
-
-  window.requestAnimationFrame(animationLoop);
+    else
+    {
+      item.classList.remove('is-visible');
+    }   
+    
+    //trigger events on scroll
+    window.addEventListener('scroll', (event) => {
+        if(isElementInViewport(item))
+        {
+          item.classList.add('is-visible');
+          console.log(item.id + " becomes visible");
+        }
+        else
+        {
+          item.classList.remove('is-visible');
+          console.log(item.id + " becomes invisible");
+        }          
+    }, false);   
 }
-
-// Call the animationLoop for the first time
-animationLoop();
-
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {

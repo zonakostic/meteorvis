@@ -2,7 +2,7 @@
             font-family: 'Bahnschrift';
             src: url('fonts/BAHNSCHRIFT.TTF'),
         }
-        
+
         body {
             background: #07283f !important;
             font-family: 'Roboto', sans-serif;
@@ -10,11 +10,11 @@
             color: white;
             line-height: 1.5;
         }
-        
+
         p {
             text-align: justify;
         }
-        
+
         blockquote {
             color: rgba(230, 230, 230, .75);
             font-family: 'Roboto';
@@ -26,7 +26,7 @@
             border-radius: 5px;
             border-left: 3px solid rgba(230, 230, 230, .75);
         }
-        
+
         cite {
             text-align: right;
             font-weight: 100;
@@ -37,11 +37,11 @@
             display: block;
             font-style: normal;
         }
-        
+
         mark {
             line-height: 1.5em;
         }
-        
+
         header {
             opacity: 0;
             transition: opacity 2.0s 0.5s ease-out;
@@ -50,27 +50,29 @@
         header.is-visible {
             opacity: 1;
         }
-        
+
         div#title-img-container {
             height: 60vh;
             background-color: #07283f !important;
         }
-          
-        
+
+
         img#meteor-measure {
             width: 60%;
             top: 10%;
             left: 20%;
             position: absolute;
+            opacity: 0;
         }
-        
+
         img#meteor-measure.is-visible {
             animation-name: meteor-measure-rotate, meteor-measure-opacity-change;
             animation-duration: 2s, 2s;
-            animation-timing-function: ease-in-out, linear;         
+            animation-timing-function: ease-in-out, linear;
+            opacity: 1;
         }
-       
-               
+
+
         @keyframes meteor-measure-rotate {
             from {
                 transform: rotate(180deg);
@@ -79,7 +81,7 @@
                 transform: rotate(359deg);
             }
         }
-        
+
         @keyframes meteor-measure-opacity-change {
             0% {
                 opacity: 0.0;
@@ -91,23 +93,25 @@
                 opacity: 1.0;
             }
         }
-        
+
         img#meteor-fly {
             width: 60%;
             top: 10%;
             left: 20%;
             position: absolute;
+            opacity: 0;
         }
-        
+
         img#meteor-fly.is-visible {
             animation-name: meteor-fly-move, meteor-fly-shake;
             animation-duration: 2s, 1s;
             animation-iteration-count: 1, infinite;
             animation-timing-function: ease-in-out, linear;
             animation-delay: 0s, 2s;
+            opacity: 1;
         }
 
-        
+
         @keyframes meteor-fly-move {
             from {
                 top: -30%;
@@ -118,7 +122,7 @@
                 left: 20%;
             }
         }
-        
+
         @keyframes meteor-fly-shake {
             0% {
                 transform: translate(1px, 1px) rotate(0deg);
@@ -154,27 +158,29 @@
                 transform: translate(1px, -2px) rotate(-1deg);
             }
         }
-        
+
         div#final-img-container {
             height: 100vh;
             overflow:visible;
             position: relative;
         }
-        
-        img#whole {      
+
+        img#whole {
             position: absolute;
             top: 7%;
             left: 7%;
+            opacity: 0;
         }
-        
+
         img#whole.is-visible {
             animation-name: whole-fly;
             animation-duration: 2s;
             animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
             animation-delay: 0s;
+            opacity: 1;
         }
-        
+
         @keyframes whole-fly {
             from {
                 top: -60%;
@@ -185,20 +191,22 @@
                 left: 7%;
             }
         }
-        
-        img#zoom-out {                 
+
+        img#zoom-out {
             position: absolute;
             top: 7%;
             left: 7%;
+            opacity: 0;
         }
-        
+
         img#zoom-out.is-visible {
             animation-name: zoom-out-opacity-change;
             animation-duration: 4s;
             animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
+            opacity: 1;
         }
-        
+
         @keyframes zoom-out-opacity-change {
             0% {
                 opacity: 0.0;
@@ -210,21 +218,23 @@
                 opacity: 1.0;
             }
         }
-        
-        
-        img#specific {                
+
+
+        img#specific {
             position: absolute;
             top: 7%;
-            left: 7%;         
+            left: 7%;
+            opacity: 0;
         }
-        
+
         img#specific.is-visible {
             animation-name: specific-fly;
             animation-duration: 4s;
             animation-iteration-count: 1;
             animation-timing-function: ease-in-out;
+            opacity: 1;
         }
-        
+
         @keyframes specific-fly {
             0% {
                 top: -60%;
@@ -237,5 +247,5 @@
             100% {
                 top: 7%;
                 left: 7%;
-            }      
+            }
         }
